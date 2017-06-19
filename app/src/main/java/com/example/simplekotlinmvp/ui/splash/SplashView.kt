@@ -5,4 +5,6 @@ import com.example.simplekotlinmvp.ui.base.BaseView
 /**
  * Created by sally on 6/19/17.
  */
-interface SplashView : BaseView
+interface SplashView : BaseView {
+    fun navigateToRepositoriesListScreen()
+}

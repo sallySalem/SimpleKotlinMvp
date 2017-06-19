@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">SimpleKotlinMvp</string>
     <string name="splash_screen_title">Splash Screen!</string>
+    <string name="home_screen_title">Home Screen</string>
 </resources>
