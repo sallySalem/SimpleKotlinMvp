@@ -22,17 +22,14 @@ class HomeActivity : BaseActivity(), HomeView {
         }
     }
 
-    override var presenter: BasePresenter<*>?
-    get() = super.presenter
-    set(value) {homePresenter}
+    override fun initializePresenter() {
+        super.presenter = homePresenter
+        homePresenter.view = this
+    }
 
     override fun initializeDagger() {
         val app = application as SimpleKotlinApp
         app.appComponent?.inject(this)
-    }
-
-    override fun initializePresenter() {
-        homePresenter.view = this;
     }
 
     override var layoutId: Int = R.layout.activity_home
