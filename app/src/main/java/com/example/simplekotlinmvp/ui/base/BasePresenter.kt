@@ -8,6 +8,4 @@ import android.os.Bundle
 open class BasePresenter<T : BaseView> {
 
     var view: T? = null
-
-    open fun initialize(extras: Bundle?) {}
 }

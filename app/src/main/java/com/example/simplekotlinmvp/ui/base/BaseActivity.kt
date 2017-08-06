@@ -13,6 +13,8 @@ abstract class BaseActivity : AppCompatActivity(), BaseView {
 
     protected abstract fun initializePresenter()
 
+    protected abstract fun initialize(bundle: Bundle?)
+
     abstract var layoutId: Int
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +23,6 @@ abstract class BaseActivity : AppCompatActivity(), BaseView {
         initializeDagger()
         initializePresenter()
 
-        presenter?.initialize(intent.extras)
-
+        initialize(intent!!.extras)
     }
 }

@@ -17,6 +17,10 @@ class SplashActivity : BaseActivity(), SplashView {
     @Inject
     lateinit var splashPresenter: SplashPresenter
 
+    override fun initialize(bundle: Bundle?) {
+        splashPresenter.initialize()
+    }
+
     override fun initializeDagger() {
         val app = application as SimpleKotlinApp
         app.appComponent?.inject(this)

@@ -2,6 +2,7 @@ package com.example.simplekotlinmvp.ui.home
 
 import android.app.Activity
 import android.content.Intent
+import android.os.Bundle
 import com.example.simplekotlinmvp.R
 import com.example.simplekotlinmvp.SimpleKotlinApp
 import com.example.simplekotlinmvp.ui.base.BaseActivity
@@ -12,6 +13,9 @@ import javax.inject.Inject
  * Created by sally on 6/19/17.
  */
 class HomeActivity : BaseActivity(), HomeView {
+    override fun initialize(bundle: Bundle?) {
+        //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
     @Inject
     lateinit var homePresenter : HomePresenter
 

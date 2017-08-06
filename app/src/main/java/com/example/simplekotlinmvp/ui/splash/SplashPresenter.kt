@@ -9,9 +9,8 @@ import javax.inject.Inject
  */
 class SplashPresenter @Inject constructor() : BasePresenter<SplashView>() {
     val SPLASH_TIME: Long = 3000
-
-    override fun initialize(extras: android.os.Bundle?) {
-        super.initialize(extras)
+    fun initialize() {
         Handler().postDelayed({ view?.navigateToRepositoriesListScreen() }, SPLASH_TIME)
     }
+
 }

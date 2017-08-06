@@ -8,7 +8,5 @@ import javax.inject.Inject
  * Created by sally on 6/19/17.
  */
 class HomePresenter @Inject constructor(): BasePresenter<HomeView>(){
-    override fun initialize(extras: Bundle?) {
-        super.initialize(extras)
-    }
+
 }
